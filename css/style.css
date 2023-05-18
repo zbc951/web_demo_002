@@ -1,0 +1,1237 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+}
+
+select, input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #c7b87b;
+}
+html body {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html body header {
+  width: 100%;
+  min-width: 1600px;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+html body header .top {
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#191919), to(#0b0b0b));
+  background: linear-gradient(to right, #191919 0%, #0b0b0b 100%);
+  border-bottom: solid 2px #a08a46;
+}
+html body header .top article {
+  width: 1500px;
+  height: 100%;
+  margin: 0px auto;
+}
+html body header .top article .logo {
+  float: left;
+  width: 140px;
+  height: 44px;
+  background: url("../images/logo.png") no-repeat;
+  margin-top: 8px;
+}
+html body header .top article .rightBox {
+  width: auto;
+  height: 100%;
+  float: right;
+}
+html body header .top article .rightBox .loginBox {
+  display: none;
+  width: auto;
+  height: 100%;
+  float: left;
+}
+html body header .top article .rightBox .loginBox.display {
+  display: block;
+}
+html body header .top article .rightBox .loginBox input {
+  width: 175px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#43350e), to(#77632d));
+  background: linear-gradient(to bottom, #43350e 0%, #77632d 100%);
+  border-radius: 5px;
+  border: solid 1px #a48f55;
+  color: #b6ab85;
+  margin: 15px 5px 0px 0px;
+  padding-left: 6px;
+  font-size: 15px;
+}
+html body header .top article .rightBox .loginBox input::-webkit-input-placeholder {
+  color: #b6ab85;
+}
+html body header .top article .rightBox .loginBox input::-moz-placeholder {
+  color: #b6ab85;
+}
+html body header .top article .rightBox .loginBox input:-ms-input-placeholder {
+  color: #b6ab85;
+}
+html body header .top article .rightBox .loginBox input::-ms-input-placeholder {
+  color: #b6ab85;
+}
+html body header .top article .rightBox .loginBox input::placeholder {
+  color: #b6ab85;
+}
+html body header .top article .rightBox .loginBox a {
+  display: inline-block;
+  font-size: 12px;
+  color: #d585b1;
+  vertical-align: bottom;
+  margin-right: 8px;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  text-decoration: underline;
+}
+html body header .top article .rightBox .loginBox a:hover, html body header .top article .rightBox .loginBox a:active, html body header .top article .rightBox .loginBox a.active {
+  color: #ffffff;
+}
+html body header .top article .rightBox .loginBox button {
+  width: 80px;
+  height: auto;
+  border: solid 1px #dbc58a;
+  border-radius: 5px;
+  padding: 2px 0px 5px;
+  color: #ffffff;
+  vertical-align: bottom;
+  font-size: 16px;
+  margin-right: 4px;
+}
+html body header .top article .rightBox .loginBox button.login {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c871b4), color-stop(44%, #89106c), color-stop(92%, #844acc));
+  background: linear-gradient(to bottom, #c871b4 0%, #89106c 44%, #844acc 92%);
+}
+html body header .top article .rightBox .loginBox button.login:hover, html body header .top article .rightBox .loginBox button.login:active, html body header .top article .rightBox .loginBox button.login.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6e0755), to(#6c2cba));
+  background: linear-gradient(to bottom, #6e0755 0%, #6c2cba 100%);
+}
+html body header .top article .rightBox .loginBox button.signup {
+  margin: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5c46a), to(#634b21));
+  background: linear-gradient(to bottom, #e5c46a 0%, #634b21 100%);
+  -webkit-box-shadow: 0px 0px 0px 1px #3a2813 inset;
+          box-shadow: 0px 0px 0px 1px #3a2813 inset;
+}
+html body header .top article .rightBox .loginBox button.signup:hover, html body header .top article .rightBox .loginBox button.signup:active, html body header .top article .rightBox .loginBox button.signup.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#94782c), to(#5c4419));
+  background: linear-gradient(to top, #94782c 0%, #5c4419 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body header .top article .rightBox .insideBox {
+  display: none;
+  width: auto;
+  height: 100%;
+  float: left;
+}
+html body header .top article .rightBox .insideBox.display {
+  display: block;
+}
+html body header .top article .rightBox .insideBox p {
+  display: inline-block;
+  color: #ea5ec7;
+  line-height: 60px;
+  font-size: 16px;
+}
+html body header .top article .rightBox .insideBox p:nth-of-type(2) {
+  padding: 0px 30px 0px 20px;
+}
+html body header .top article .rightBox .insideBox p span {
+  color: #e4ce9c;
+  padding-left: 6px;
+}
+html body header .top article .rightBox .insideBox p .re {
+  width: 26px;
+  height: 26px;
+  border: solid 1px #f6e3bd;
+  background: -webkit-gradient(linear, left top, right top, from(#804fd3), to(#ae1374));
+  background: linear-gradient(to right, #804fd3 0%, #ae1374 100%);
+  border-radius: 3px;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+html body header .top article .rightBox .insideBox p .re::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 16px;
+  background: url("../images/re.png") no-repeat;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body header .top article .rightBox .insideBox p .re:hover, html body header .top article .rightBox .insideBox p .re:active, html body header .top article .rightBox .insideBox p .re.active {
+  background: -webkit-gradient(linear, right top, left top, from(#804fd3), to(#ae1374));
+  background: linear-gradient(to left, #804fd3 0%, #ae1374 100%);
+}
+html body header .top article .rightBox .insideBox p .re:hover::before, html body header .top article .rightBox .insideBox p .re:active::before, html body header .top article .rightBox .insideBox p .re.active::before {
+  -webkit-animation: re 1.5s linear 0s infinite;
+          animation: re 1.5s linear 0s infinite;
+}
+html body header .top article .rightBox .insideBox .smallBtn {
+  width: auto;
+  height: 28px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c871b4), color-stop(44%, #89106c), color-stop(92%, #844acc));
+  background: linear-gradient(to top, #c871b4 0%, #89106c 44%, #844acc 92%);
+  padding: 0px 8px;
+  border: solid 1px #dbc58a;
+  border-radius: 3px;
+  margin: 0px 2px;
+  vertical-align: middle;
+  color: #e5d6e1;
+}
+html body header .top article .rightBox .insideBox .smallBtn:hover, html body header .top article .rightBox .insideBox .smallBtn:active, html body header .top article .rightBox .insideBox .smallBtn.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#89106c), color-stop(44%, #530741), color-stop(92%, #390677));
+  background: linear-gradient(to top, #89106c 0%, #530741 44%, #390677 92%);
+}
+html body header .top article .rightBox .insideBox a {
+  display: inline-block;
+  width: 70px;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5c46a), to(#634b21));
+  background: linear-gradient(to bottom, #e5c46a 0%, #634b21 100%);
+  border: solid 1px #dbc58a;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 0px 1px #3e2c16 inset;
+          box-shadow: 0px 0px 0px 1px #3e2c16 inset;
+  color: #ffffff;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+html body header .top article .rightBox .insideBox a:hover, html body header .top article .rightBox .insideBox a:active, html body header .top article .rightBox .insideBox a.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#94782c), to(#5c4419));
+  background: linear-gradient(to top, #94782c 0%, #5c4419 100%);
+}
+html body header .bottom {
+  width: 100%;
+  height: 70px;
+  background: -webkit-gradient(linear, left top, right top, from(#c771b3), to(#1d1018));
+  background: linear-gradient(to right, #c771b3 0%, #1d1018 100%);
+}
+html body header .bottom article {
+  width: 1500px;
+  height: 100%;
+  margin: 0px auto;
+}
+html body header .bottom article ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body header .bottom article ul li {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+html body header .bottom article ul li:hover a::before, html body header .bottom article ul li:active a::before, html body header .bottom article ul li.active a::before {
+  -webkit-animation: li_hover1 0.3s linear 0s;
+          animation: li_hover1 0.3s linear 0s;
+  background: -webkit-gradient(linear, left bottom, left top, from(#804fd3), to(#ae1374));
+  background: linear-gradient(to top, #804fd3 0%, #ae1374 100%);
+  width: 100%;
+  height: 100%;
+}
+html body header .bottom article ul li:hover a span, html body header .bottom article ul li:active a span, html body header .bottom article ul li.active a span {
+  color: #ffffff;
+  -webkit-animation: imgJump 0.3s linear 0s;
+          animation: imgJump 0.3s linear 0s;
+}
+html body header .bottom article ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+html body header .bottom article ul li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0px;
+  width: 0px;
+  height: 0px;
+}
+html body header .bottom article ul li a span {
+  display: block;
+  color: #ddc075;
+  line-height: 70px;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+html body header .slideMenu {
+  opacity: 0;
+  width: 100%;
+  height: 0px;
+  background: #000000d7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
+}
+html body header .slideMenu.display {
+  opacity: 1;
+  height: 250px;
+}
+html body header .slideMenu article {
+  width: 1200px;
+  height: 100%;
+  margin: 0px auto;
+}
+html body header .slideMenu article .innerList {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 20px;
+}
+html body header .slideMenu article .innerList.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body header .slideMenu article .innerList.display a {
+  -webkit-animation: slideImg 0.5s ease-out 0s;
+          animation: slideImg 0.5s ease-out 0s;
+}
+html body header .slideMenu article .innerList a {
+  width: 157px;
+  height: 190px;
+  background: url("../images/slideMenuImg.png") no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-right: 20px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+html body header .slideMenu article .innerList a:last-child {
+  margin: 0px;
+}
+html body header .slideMenu article .innerList a:hover, html body header .slideMenu article .innerList a:active, html body header .slideMenu article .innerList a.active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+html body header .slideMenu article .innerList a p {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  bottom: -18px;
+  color: #ffe0a4;
+}
+html body main {
+  width: 100%;
+  min-width: 1600px;
+  height: auto;
+  padding-top: 132px;
+}
+html body main .cellphoneDownload {
+  position: fixed;
+  left: 15px;
+  top: 260px;
+  z-index: 10;
+  padding: 8px 8px 15px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  background: linear-gradient(-9deg, #cab05f 0%, #8f5811 26%, #cab05f 51%, #f2e7ab 72%, #cda560 100%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #37230e;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #edd397 #6d4e31 #6d4e31 #edd397;
+  -webkit-box-shadow: 0px 0px 5px 2px #0000008f;
+          box-shadow: 0px 0px 5px 2px #0000008f;
+  overflow: hidden;
+  white-space: nowrap;
+}
+html body main .cellphoneDownload::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  width: 100px;
+  height: 30px;
+  top: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+html body main .cellphoneDownload:hover::before, html body main .cellphoneDownload:active::before, html body main .cellphoneDownload.active::before {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  top: 210px;
+}
+html body main .cellphoneDownload span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url("../images/download.png") no-repeat;
+  margin: 6px auto;
+}
+html body main .sideBtn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  position: fixed;
+  right: 15px;
+  top: 270px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #edd396 #674528 #674528 #edd396;
+  background: linear-gradient(-11deg, #cab05f 0%, #8f5811 27%, #f2e7ab 82%, #cda560 100%);
+  -webkit-box-shadow: 0px 0px 5px 2px #0000008f;
+          box-shadow: 0px 0px 5px 2px #0000008f;
+  z-index: 10;
+}
+html body main .sideBtn:hover, html body main .sideBtn:active, html body main .sideBtn.active {
+  border-color: #b776d9 #680e60 #680e60 #b776d9;
+  background: linear-gradient(-11deg, #cc1fa1 2%, #7a2bac 97%);
+  -webkit-animation: rightSide_hover 0.7s linear 0s;
+          animation: rightSide_hover 0.7s linear 0s;
+}
+html body main .sideBtn:hover span, html body main .sideBtn:active span, html body main .sideBtn.active span {
+  background-position-y: 100%;
+}
+html body main .sideBtn:hover p, html body main .sideBtn:active p, html body main .sideBtn.active p {
+  color: #0e0011;
+}
+html body main .sideBtn:nth-of-type(3) {
+  top: 330px;
+}
+html body main .sideBtn:nth-of-type(3) span {
+  background-position-x: 50%;
+}
+html body main .sideBtn:nth-of-type(4) {
+  top: 390px;
+}
+html body main .sideBtn:nth-of-type(4) span {
+  background-position-x: 100%;
+}
+html body main .sideBtn span {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30px;
+  height: 27px;
+  background: url("../images/sideBtnImg.png") no-repeat;
+  background-size: 300%;
+}
+html body main .sideBtn p {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #2f1704;
+  font-size: 12px;
+  bottom: 3px;
+  font-weight: bold;
+}
+html body main .single-item {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 2px #fce793;
+  margin: 0px !important;
+}
+html body main .single-item a .img {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 23%;
+  background: url("../images/banner.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item .slick-dots {
+  margin-bottom: 40px;
+}
+html body main .marqueeBox {
+  width: 1500px;
+  height: 42px;
+  margin: 30px auto 50px;
+  border: solid 1px #a08b4d;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#0b0b0b));
+  background: linear-gradient(to bottom, #272727 0%, #0b0b0b 100%);
+}
+html body main .marqueeBox p {
+  line-height: 42px;
+  color: #dfca96;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+}
+html body main .marqueeBox marquee {
+  width: 92%;
+  height: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9f8746), to(#574727));
+  background: linear-gradient(to top, #9f8746 0%, #574727 100%);
+  border: solid 1px #a08b4d;
+  border-radius: 5px;
+  float: right;
+  margin: 5px 40px 0px 0px;
+  color: #fdf0bb;
+  line-height: 30px;
+}
+html body main .mainBox {
+  width: 100%;
+  height: auto;
+}
+html body main .mainBox article {
+  width: 1500px;
+  height: auto;
+  margin: 0px auto;
+}
+html body main .mainBox article .mainList {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body main .mainBox article .mainList li {
+  width: 200px;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ce75ba), to(#6a3552));
+  background: linear-gradient(to bottom, #ce75ba 0%, #6a3552 100%);
+  border: solid 4px #f3d26e;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 0px 1px #26062d inset;
+          box-shadow: 0px 0px 0px 1px #26062d inset;
+  position: relative;
+}
+html body main .mainBox article .mainList li:hover::after, html body main .mainBox article .mainList li:active::after, html body main .mainBox article .mainList li.active::after {
+  -webkit-animation: wordJump 0.2s ease-out 0s;
+          animation: wordJump 0.2s ease-out 0s;
+}
+html body main .mainBox article .mainList li:hover div span, html body main .mainBox article .mainList li:active div span, html body main .mainBox article .mainList li.active div span {
+  -webkit-animation: imgJump 0.4s ease-out 0s;
+          animation: imgJump 0.4s ease-out 0s;
+}
+html body main .mainBox article .mainList li::after {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 146px;
+  background: url("../images/mainWord_small.png") no-repeat;
+  background-size: 600%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+html body main .mainBox article .mainList li.sportGame div {
+  bottom: -4px;
+  left: 65%;
+}
+html body main .mainBox article .mainList li.sportGame a::before {
+  -webkit-animation: floatBall2 1.2s ease-in-out 0s infinite alternate;
+          animation: floatBall2 1.2s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.sportGame a::after {
+  -webkit-animation: floatBall3 1s ease-in-out 0s infinite alternate;
+          animation: floatBall3 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.liveGame div span, html body main .mainBox article .mainList li.liveGame::after {
+  background-position-x: 20%;
+}
+html body main .mainBox article .mainList li.liveGame a::before {
+  -webkit-animation: floatBall1 1.4s ease-in-out 0s infinite alternate;
+          animation: floatBall1 1.4s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.liveGame a::after {
+  -webkit-animation: floatBall4 0.8s ease-in-out 0s infinite alternate;
+          animation: floatBall4 0.8s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.slotGame div span, html body main .mainBox article .mainList li.slotGame::after {
+  background-position-x: 40%;
+}
+html body main .mainBox article .mainList li.slotGame a::before {
+  -webkit-animation: floatBall4 1.4s ease-in-out 0s infinite alternate;
+          animation: floatBall4 1.4s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.slotGame a::after {
+  -webkit-animation: floatBall3 1.4s ease-in-out 0s infinite alternate;
+          animation: floatBall3 1.4s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.lotteryGame div span, html body main .mainBox article .mainList li.lotteryGame::after {
+  background-position-x: 60%;
+}
+html body main .mainBox article .mainList li.lotteryGame a::before {
+  -webkit-animation: floatBall2 0.7s ease-in-out 0s infinite alternate;
+          animation: floatBall2 0.7s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.lotteryGame a::after {
+  -webkit-animation: floatBall1 1s ease-in-out 0s infinite alternate;
+          animation: floatBall1 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.fishGame div span, html body main .mainBox article .mainList li.fishGame::after {
+  background-position-x: 80%;
+}
+html body main .mainBox article .mainList li.fishGame a::before {
+  -webkit-animation: floatBall4 1s ease-in-out 0s infinite alternate;
+          animation: floatBall4 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.fishGame a::after {
+  -webkit-animation: floatBall4 1.5s ease-in-out 0s infinite alternate;
+          animation: floatBall4 1.5s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.cardGame div span, html body main .mainBox article .mainList li.cardGame::after {
+  background-position-x: 100%;
+}
+html body main .mainBox article .mainList li.cardGame a::before {
+  -webkit-animation: floatBall3 1s ease-in-out 0s infinite alternate;
+          animation: floatBall3 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li.cardGame a::after {
+  -webkit-animation: floatBall2 1s ease-in-out 0s infinite alternate;
+          animation: floatBall2 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainList li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body main .mainBox article .mainList li a::before {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  left: 15px;
+  top: 25px;
+  background: url("../images/ball.png") no-repeat;
+  pointer-events: none;
+}
+html body main .mainBox article .mainList li a::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  right: -12px;
+  bottom: 50px;
+  background: url("../images/ball.png") no-repeat;
+  pointer-events: none;
+}
+html body main .mainBox article .mainList li div {
+  position: absolute;
+  overflow: hidden;
+  width: 215px;
+  height: 227px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+html body main .mainBox article .mainList li div span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/mainImg_small.png") no-repeat;
+  background-size: 600%;
+}
+html body main .mainBox article .mainList li p {
+  color: #f8e9ad;
+  font-size: 21px;
+  text-align: center;
+  padding-top: 20px;
+}
+html body main .mainBox article .multiple-items {
+  width: 100%;
+  height: auto;
+  margin: 95px 0px 50px !important;
+}
+html body main .mainBox article .multiple-items a {
+  text-align: center;
+}
+html body main .mainBox article .multiple-items a:hover button, html body main .mainBox article .multiple-items a:active button, html body main .mainBox article .multiple-items a.active button {
+  -webkit-transform: scale(1.2) translateY(-10%);
+          transform: scale(1.2) translateY(-10%);
+}
+html body main .mainBox article .multiple-items a .img {
+  width: 50%;
+  height: 0px;
+  margin: 0px auto;
+  padding-bottom: 40%;
+  background: url("../images/mainImg_big.png") no-repeat;
+  background-size: 100%;
+}
+html body main .mainBox article .multiple-items a .img h1 {
+  float: left;
+  color: #fff5c6;
+  font-size: 36px;
+}
+html body main .mainBox article .multiple-items a .img p {
+  float: right;
+  width: 325px;
+  height: auto;
+  color: #ccb677;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: left;
+}
+html body main .mainBox article .multiple-items a button {
+  width: 327px;
+  height: 139px;
+  background: url("../images/mainListButton.png") no-repeat;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+html body main .mainBox article .multiple-items .slick-dots {
+  opacity: 0;
+  top: 0px;
+  bottom: none;
+  pointer-events: none;
+}
+html body main .mainBox article .multiple-items .slick-prev:before, html body main .mainBox article .multiple-items .slick-next:before {
+  font-family: none;
+  content: "";
+}
+html body main .mainBox article .multiple-items .slick-next, html body main .mainBox article .multiple-items .slick-prev {
+  width: 66px;
+  height: 117px;
+  background: url("../images/mainListArrow.png") no-repeat;
+  z-index: 5;
+}
+html body main .mainBox article .multiple-items .slick-next {
+  top: 50%;
+  -webkit-transform: translateY(-50%) scaleX(-1);
+          transform: translateY(-50%) scaleX(-1);
+  right: 0px;
+}
+html body main .mainBox article .multiple-items .slick-prev {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0px;
+}
+html body main .mainBox article .multiple-items .slick-next:hover, html body main .mainBox article .multiple-items .slick-prev:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+html body footer {
+  width: 100%;
+  min-width: 1600px;
+  height: auto;
+}
+html body footer .top {
+  width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#8c4f7d), color-stop(77%, #932a69), to(#6c3a60));
+  background: linear-gradient(to right, #8c4f7d 0%, #932a69 77%, #6c3a60 100%);
+}
+html body footer .top article {
+  width: 1500px;
+  height: 100%;
+  margin: 0px auto;
+}
+html body footer .top article ul {
+  width: auto;
+  height: 100%;
+}
+html body footer .top article ul li {
+  width: 120px;
+  height: 100%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+html body footer .top article ul li:hover, html body footer .top article ul li:active, html body footer .top article ul li.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6c0c54), to(#6f1ea3));
+  background: linear-gradient(to bottom, #6c0c54 0%, #6f1ea3 100%);
+  -webkit-animation: footerLi_hover 0.4s ease-out 0s;
+          animation: footerLi_hover 0.4s ease-out 0s;
+}
+html body footer .top article ul li:hover a span, html body footer .top article ul li:active a span, html body footer .top article ul li.active a span {
+  -webkit-animation: footerA_hover 0.4s ease-out 0s;
+          animation: footerA_hover 0.4s ease-out 0s;
+}
+html body footer .top article ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+html body footer .top article ul li a span {
+  display: block;
+  line-height: 50px;
+  color: #ddc075;
+  font-size: 16px;
+}
+html body footer .bottom {
+  width: 100%;
+  height: 160px;
+  background: -webkit-gradient(linear, left top, right top, from(#5d4e20), color-stop(52%, #c7b87b), to(#5d4e20));
+  background: linear-gradient(to right, #5d4e20 0%, #c7b87b 52%, #5d4e20 100%);
+  text-align: center;
+}
+html body footer .bottom p {
+  color: #200e18;
+  font-weight: bold;
+  padding-top: 45px;
+}
+html body footer .bottom p:last-child {
+  padding-top: 30px;
+}
+html body .bg {
+  width: 100%;
+  min-width: 1600px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("../images/bg.jpg") no-repeat top center;
+  background-size: cover;
+  z-index: -999;
+}
+
+@-webkit-keyframes re {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes re {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes li_hover1 {
+  0% {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    border-radius: 50% 50% 0% 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 150%;
+    height: 150%;
+    border-radius: 50% 50% 0% 0%;
+  }
+}
+@keyframes li_hover1 {
+  0% {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    border-radius: 50% 50% 0% 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 150%;
+    height: 150%;
+    border-radius: 50% 50% 0% 0%;
+  }
+}
+@-webkit-keyframes slideImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes slideImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@-webkit-keyframes rightSide_hover {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: scale(1.2) rotate(0deg);
+            transform: scale(1.2) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: scale(1.2) rotate(-15deg);
+            transform: scale(1.2) rotate(-15deg);
+  }
+  45% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+            transform: scale(1.2) rotate(15deg);
+  }
+  60% {
+    -webkit-transform: scale(1.2) rotate(-15deg);
+            transform: scale(1.2) rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+            transform: scale(1.2) rotate(15deg);
+  }
+  80% {
+    -webkit-transform: scale(1.2) rotate(0deg);
+            transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes rightSide_hover {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: scale(1.2) rotate(0deg);
+            transform: scale(1.2) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: scale(1.2) rotate(-15deg);
+            transform: scale(1.2) rotate(-15deg);
+  }
+  45% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+            transform: scale(1.2) rotate(15deg);
+  }
+  60% {
+    -webkit-transform: scale(1.2) rotate(-15deg);
+            transform: scale(1.2) rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+            transform: scale(1.2) rotate(15deg);
+  }
+  80% {
+    -webkit-transform: scale(1.2) rotate(0deg);
+            transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+}
+@-webkit-keyframes floatBall1 {
+  0% {
+    -webkit-transform: translate(80%, 50%);
+            transform: translate(80%, 50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes floatBall1 {
+  0% {
+    -webkit-transform: translate(80%, 50%);
+            transform: translate(80%, 50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@-webkit-keyframes floatBall2 {
+  0% {
+    -webkit-transform: translate(50%, 80%);
+            transform: translate(50%, 80%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes floatBall2 {
+  0% {
+    -webkit-transform: translate(50%, 80%);
+            transform: translate(50%, 80%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@-webkit-keyframes floatBall3 {
+  0% {
+    -webkit-transform: translate(80%, -50%);
+            transform: translate(80%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes floatBall3 {
+  0% {
+    -webkit-transform: translate(80%, -50%);
+            transform: translate(80%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@-webkit-keyframes floatBall4 {
+  0% {
+    -webkit-transform: translate(-50%, 80%);
+            transform: translate(-50%, 80%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes floatBall4 {
+  0% {
+    -webkit-transform: translate(-50%, 80%);
+            transform: translate(-50%, 80%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@-webkit-keyframes wordJump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
+            transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(0deg);
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+@keyframes wordJump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
+            transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(0deg);
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+@-webkit-keyframes imgJump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes imgJump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@-webkit-keyframes footerLi_hover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes footerLi_hover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes footerA_hover {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes footerA_hover {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}

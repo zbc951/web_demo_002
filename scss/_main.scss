@@ -1,0 +1,1139 @@
+html {
+    width: 100%;
+    height: 100%;
+    background: #c7b87b;
+
+    body {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        //header
+        header {
+            width: 100%;
+            min-width: 1600px;
+            height: auto;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+
+            //上部
+            .top {
+                width: 100%;
+                height: 60px;
+                background: linear-gradient(to right,#191919 0%,#0b0b0b 100%);
+                border-bottom: solid 2px #a08a46;
+
+                article {
+                    width: 1500px;
+                    height: 100%;
+                    margin: 0px auto;
+
+                    //logo
+                    .logo {
+                        float: left;
+                        width: 140px;
+                        height: 44px;
+                        background: url('../images/logo.png') no-repeat;
+                        margin-top: 8px;
+                    }
+
+                    //右側
+                    .rightBox {
+                        width: auto;
+                        height: 100%;
+                        float: right;
+
+                        //登入前樣式
+                        .loginBox {
+                            display: none;
+                            width: auto;
+                            height: 100%;
+                            float: left;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            //帳號密碼輸入框
+                            input {
+                                width: 175px;
+                                height: 30px;
+                                background: linear-gradient(to bottom,#43350e 0%,#77632d 100%);
+                                border-radius: 5px;
+                                border: solid 1px #a48f55;
+                                color: #b6ab85;
+                                margin: 15px 5px 0px 0px;
+                                padding-left: 6px;
+                                font-size: 15px;
+
+                                &::placeholder {
+                                    color: #b6ab85;
+                                }
+                            }
+
+                            //忘記密碼
+                            a {
+                                display: inline-block;
+                                font-size: 12px;
+                                color: #d585b1;
+                                vertical-align: bottom;
+                                margin-right: 8px;
+                                transform: translateY(-3px);
+                                text-decoration: underline;
+
+                                &:hover,&:active,&.active {
+                                    color: #ffffff;
+                                }
+                            }
+
+                            //登入註冊按鈕
+                            button {
+                                width: 80px;
+                                height: auto;
+                                border: solid 1px #dbc58a;
+                                border-radius: 5px;
+                                padding: 2px 0px 5px;
+                                color: #ffffff;
+                                vertical-align: bottom;
+                                font-size: 16px;
+                                margin-right: 4px;
+
+                                &.login {
+                                    background: linear-gradient(to bottom,#c871b4 0%,#89106c 44%,#844acc 92%);
+
+                                    &:hover,&:active,&.active {
+                                        background: linear-gradient(to bottom,#6e0755 0%,#6c2cba 100%);
+                                    }
+                                }
+
+                                &.signup {
+                                    margin: 0px;
+                                    background: linear-gradient(to bottom,#e5c46a 0%,#634b21 100%);
+                                    box-shadow: 0px 0px 0px 1px #3a2813 inset;
+
+                                    &:hover,&:active,&.active {
+                                        background: linear-gradient(to top,#94782c 0%,#5c4419 100%);
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        //登入後樣式
+                        .insideBox {
+                            display: none;
+                            width: auto;
+                            height: 100%;
+                            float: left;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            //帳號+帳戶餘額字
+                            p {
+                                display: inline-block;
+                                color: #ea5ec7;
+                                line-height: 60px;
+                                font-size: 16px;
+
+                                &:nth-of-type(2) {
+                                    padding: 0px 30px 0px 20px;
+                                }
+
+                                span {
+                                    color: #e4ce9c;
+                                    padding-left: 6px;
+                                }
+
+                                //刷新按鈕
+                                .re {
+                                    width: 26px;
+                                    height: 26px;
+                                    border: solid 1px #f6e3bd;
+                                    background: linear-gradient(to right,#804fd3 0%,#ae1374 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    vertical-align: middle;
+                                    margin-left: 5px;
+
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 13px;
+                                        height: 16px;
+                                        background: url('../images/re.png') no-repeat;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%,-50%);
+                                    }
+
+                                    &:hover,&:active,&.active {
+                                        background: linear-gradient(to left,#804fd3 0%,#ae1374 100%);
+
+                                        &::before {
+                                            animation: re 1.5s linear 0s infinite;
+                                        }
+                                    }
+                                }
+                            }
+
+                            //轉存提+VIP
+                            .smallBtn {
+                                width: auto;
+                                height: 28px;
+                                background: linear-gradient(to top,#c871b4 0%,#89106c 44%,#844acc 92%);
+                                padding: 0px 8px;
+                                border: solid 1px #dbc58a;
+                                border-radius: 3px;
+                                margin: 0px 2px;
+                                vertical-align: middle;
+                                color: #e5d6e1;
+
+                                &:hover,&:active,&.active {
+                                    background: linear-gradient(to top,#89106c 0%,#530741 44%,#390677 92%);
+                                }
+                            }
+
+                            //登出按鈕
+                            a {
+                                display: inline-block;
+                                width: 70px;
+                                height: 28px;
+                                background: linear-gradient(to bottom,#e5c46a 0%,#634b21 100%);
+                                border: solid 1px #dbc58a;
+                                border-radius: 3px;
+                                box-shadow: 0px 0px 0px 1px #3e2c16 inset;
+                                color: #ffffff;
+                                line-height: 28px;
+                                text-align: center;
+                                vertical-align: middle;
+                                margin-left: 10px;
+
+                                &:hover,&:active,&.active {
+                                    background: linear-gradient(to top,#94782c 0%,#5c4419 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //下部
+            .bottom {
+                width: 100%;
+                height: 70px;
+                background: linear-gradient(to right,#c771b3 0%,#1d1018 100%);
+
+                article {
+                    width: 1500px;
+                    height: 100%;
+                    margin: 0px auto;
+
+                    //選單按鈕
+                    ul {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+
+                        li {
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+
+                            &:hover,&:active,&.active {
+
+                                a {
+
+                                    &::before {
+                                        animation: li_hover1 0.3s linear 0s;
+                                        background: linear-gradient(to top,#804fd3 0%,#ae1374 100%);
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+
+                                    span {
+                                        color: #ffffff;
+                                        animation: imgJump 0.3s linear 0s;
+                                    }
+                                }
+                            }
+
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                overflow: hidden;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    bottom: 0px;
+                                    width: 0px;
+                                    height: 0px;
+                                }
+
+                                span {
+                                    display: block;
+                                    color: #ddc075;
+                                    line-height: 70px;
+                                    font-size: 18px;
+                                    position: relative;
+                                    z-index: 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //下拉式選單
+            .slideMenu {
+                opacity: 0;
+                width: 100%;
+                height: 0px;
+                background: #000000d7;
+                transition: 0.3s;
+                overflow: hidden;
+                
+                &.display {
+                    opacity: 1;
+                    height: 250px;
+                }
+
+                article {
+                    width: 1200px;
+                    height: 100%;
+                    margin: 0px auto;
+
+                    .innerList {
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        justify-content: flex-start;
+                        box-sizing: border-box;
+                        padding-top: 20px;
+
+                        &.display {
+                            display: flex;
+
+                            a {
+                                animation: slideImg 0.5s ease-out 0s;
+                            }
+                        }
+
+                        //圖示
+                        a {
+                            width: 157px;
+                            height: 190px;
+                            background: url('../images/slideMenuImg.png') no-repeat;
+                            background-size: 100%;
+                            position: relative;
+                            margin-right: 20px;
+                            transition: 0.2s all;
+
+                            &:last-child {
+                                margin: 0px;
+                            }
+
+                            &:hover,&:active,&.active {
+                                transform: scale(1.1);
+                                filter: brightness(1.2);
+                            }
+
+                            //下方字
+                            p {
+                                position: absolute;
+                                width: 100%;
+                                height: auto;
+                                font-size: 16px;
+                                text-align: center;
+                                bottom: -18px;
+                                color: #ffe0a4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //main
+        main {
+            width: 100%;
+            min-width: 1600px;
+            height: auto;
+            padding-top: 132px;
+
+            //手機版下載
+            .cellphoneDownload {
+                position: fixed;
+                left: 15px;
+                top: 260px;
+                z-index: 10;
+                padding: 8px 8px 15px;
+                writing-mode: vertical-lr;
+                background: linear-gradient(-9deg,#cab05f 0%,#8f5811 26%,#cab05f 51%,#f2e7ab 72%,#cda560 100%);
+                font-size: 18px;
+                font-weight: bold;
+                color: #37230e;
+                letter-spacing: 1px;
+                border-radius: 10px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #edd397 #6d4e31 #6d4e31 #edd397;
+                box-shadow: 0px 0px 5px 2px #0000008f;
+                overflow: hidden;
+                white-space: nowrap;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: #ffffff;
+                    width: 100px;
+                    height: 30px;
+                    top: -60px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(-45deg);
+                    filter: blur(5px);
+                }
+
+                &:hover,&:active,&.active {
+
+                    &::before {
+                        transition: 0.4s all;
+                        top: 210px;
+                    }
+                }
+                
+                span {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background: url('../images/download.png') no-repeat;
+                    margin: 6px auto;
+                }
+            }
+
+            //右側按鈕
+            .sideBtn {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                position: fixed;
+                right: 15px;
+                top: 270px;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #edd396 #674528 #674528 #edd396;
+                background: linear-gradient(-11deg,#cab05f 0%,#8f5811 27%,#f2e7ab 82%,#cda560 100%);
+                box-shadow: 0px 0px 5px 2px #0000008f;
+                z-index: 10;
+
+                &:hover,&:active,&.active {
+                    border-color: #b776d9 #680e60 #680e60 #b776d9;
+                    background: linear-gradient(-11deg,#cc1fa1 2%,#7a2bac 97%);
+                    animation: rightSide_hover 0.7s linear 0s;
+
+                    span {
+                        background-position-y: 100%;
+                    }
+
+                    p {
+                        color: #0e0011;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    top: 330px;
+
+                    span {
+                        background-position-x: 50%;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    top: 390px;
+
+                    span {
+                        background-position-x: 100%;
+                    }
+                }
+
+                span {
+                    display: block;
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 30px;
+                    height: 27px;
+                    background: url('../images/sideBtnImg.png') no-repeat;
+                    background-size: 300%;
+                }
+
+                p {
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+                    color: #2f1704;
+                    font-size: 12px;
+                    bottom: 3px;
+                    font-weight: bold;
+                }
+            }
+
+            //圖片輪播上半部
+            .single-item {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 2px #fce793;
+                margin: 0px !important;
+                
+                a {
+
+                    .img {
+                        width: 100%;
+                        height: 0px;
+                        // padding-bottom: 25.52%;
+                        padding-bottom: 23%;
+                        background: url('../images/banner.png') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+
+                //點點位置
+                .slick-dots{
+                    margin-bottom: 40px;
+                }
+            }
+
+            //跑馬燈
+            .marqueeBox {
+                width: 1500px;
+                height: 42px;
+                margin: 30px auto 50px;
+                border: solid 1px #a08b4d;
+                border-radius: 5px;
+                background: linear-gradient(to bottom,#272727 0%,#0b0b0b 100%);
+
+                p {
+                    line-height: 42px;
+                    color: #dfca96;
+                    font-size: 20px;
+                    float: left;
+                    margin-left: 20px;
+                }
+
+                marquee {
+                    width: 92%;
+                    height: 30px;
+                    background: linear-gradient(to top,#9f8746 0%,#574727 100%);
+                    border: solid 1px #a08b4d;
+                    border-radius: 5px;
+                    float: right;
+                    margin: 5px 40px 0px 0px;
+                    color: #fdf0bb;
+                    line-height: 30px;
+                }
+            }
+
+            //主視窗
+            .mainBox {
+                width: 100%;
+                height: auto;
+                
+                article {
+                    width: 1500px;
+                    height: auto;
+                    margin: 0px auto;
+
+                    //主選單
+                    .mainList {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+
+                        li {
+                            width: 200px;
+                            height: 200px;
+                            background: linear-gradient(to bottom,#ce75ba 0%,#6a3552 100%);
+                            border: solid 4px #f3d26e;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 0px 1px #26062d inset;
+                            position: relative;
+
+                            &:hover,&:active,&.active {
+
+                                &::after {
+                                    animation: wordJump 0.2s ease-out 0s;
+                                }
+
+                                div {
+
+                                    span {
+                                        animation: imgJump 0.4s ease-out 0s;
+                                    }
+                                }
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 270px;
+                                height: 146px;
+                                background: url('../images/mainWord_small.png') no-repeat;
+                                background-size: 600%;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%,-50%);
+                                pointer-events: none;
+                            }
+
+                            &.sportGame {
+
+                                div {
+                                    bottom: -4px;
+                                    left: 65%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall2 1.2s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall3 1s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            &.liveGame {
+
+                                div span,&::after {
+                                    background-position-x: 20%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall1 1.4s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall4 0.8s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            &.slotGame {
+                                
+                                div span,&::after {
+                                    background-position-x: 40%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall4 1.4s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall3 1.4s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            &.lotteryGame {
+
+                                div span,&::after {
+                                    background-position-x: 60%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall2 0.7s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall1 1s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            &.fishGame {
+
+                                div span,&::after {
+                                    background-position-x: 80%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall4 1s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall4 1.5s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            &.cardGame {
+
+                                div span,&::after {
+                                    background-position-x: 100%;
+                                }
+
+                                a {
+
+                                    &::before {
+                                        animation: floatBall3 1s ease-in-out 0s infinite alternate;
+                                    }
+
+                                    &::after {
+                                        animation: floatBall2 1s ease-in-out 0s infinite alternate;
+                                    }
+                                }
+                            }
+
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 29px;
+                                    height: 30px;
+                                    left: 15px;
+                                    top: 25px;
+                                    background: url('../images/ball.png') no-repeat;
+                                    pointer-events: none;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 29px;
+                                    height: 30px;
+                                    right: -12px;
+                                    bottom: 50px;
+                                    background: url('../images/ball.png') no-repeat;
+                                    pointer-events: none;
+                                }
+                            }
+
+                            div {
+                                position: absolute;
+                                overflow: hidden;
+                                width: 215px;
+                                height: 227px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                bottom: 0px;
+                                pointer-events: none;
+                                overflow: hidden;
+                                z-index: 2;
+                                
+                                span {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url('../images/mainImg_small.png') no-repeat;
+                                    background-size: 600%;
+                                }
+                            }
+
+                            p {
+                                color: #f8e9ad;
+                                font-size: 21px;
+                                text-align: center;
+                                padding-top: 20px;
+                            }
+                        }
+                    }
+
+                    //圖片輪播主區域
+                    .multiple-items {
+                        width: 100%;
+                        height: auto;
+                        // margin: 150px 0px 50px !important;
+                        margin: 95px 0px 50px !important;
+                        a {
+                            text-align: center;
+
+                            &:hover,&:active,&.active {
+
+                                button {
+                                    transform: scale(1.2) translateY(-10%);
+                                }
+                            }
+
+                            .img {
+                                // width: 1120px;
+                                width: 50%;
+                                height: 0px;
+                                margin: 0px auto;
+                                // padding-bottom: 56.47%;
+                                padding-bottom: 40%;
+                                background: url('../images/mainImg_big.png') no-repeat;
+                                background-size: 100%;
+
+                                h1 {
+                                    float: left;
+                                    color: #fff5c6;
+                                    font-size: 36px;
+                                }
+
+                                p {
+                                    float: right;
+                                    width: 325px;
+                                    height: auto;
+                                    color: #ccb677;
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                    text-align: left;
+                                }
+                            }
+
+                            button {
+                                width: 327px;
+                                height: 139px;
+                                background: url('../images/mainListButton.png') no-repeat;
+                                transition: 0.3s all;
+                            }
+                        }
+
+                        //點點位置
+                        .slick-dots{
+                            opacity: 0;
+                            top: 0px;
+                            bottom: none;
+                            pointer-events: none;
+                        }
+
+                        //箭頭預設圖像取消
+                        .slick-prev:before,.slick-next:before{
+                            font-family: none;
+                            content: "";
+                        }
+
+                        //箭頭客製大小
+                        .slick-next,.slick-prev{
+                            width: 66px;
+                            height: 117px;
+                            background: url('../images/mainListArrow.png') no-repeat;
+                            z-index: 5;
+                        }
+
+                        //箭頭定位右側
+                        .slick-next{
+                            top: 50%;
+                            transform: translateY(-50%) scaleX(-1);
+                            right: 0px;
+                        }
+
+                        //箭頭定位左側
+                        .slick-prev{
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0px;
+                        }
+
+                        //箭頭hover效果
+                        .slick-next:hover,.slick-prev:hover{
+                            filter: brightness(1.2);
+                        }
+                    }
+                }
+            }
+        }
+
+        //footer
+        footer {
+            width: 100%;
+            min-width: 1600px;
+            height: auto;
+
+            //上部
+            .top {
+                width: 100%;
+                height: 50px;
+                background: linear-gradient(to right,#8c4f7d 0%,#932a69 77%,#6c3a60 100%);
+
+                article {
+                    width: 1500px;
+                    height: 100%;
+                    margin: 0px auto;
+
+                    ul {
+                        width: auto;
+                        height: 100%;
+    
+                        li {
+                            width: 120px;
+                            height: 100%;
+                            float: left;
+                            text-align: center;
+                            overflow: hidden;
+
+                            &:hover,&:active,&.active {
+                                background: linear-gradient(to bottom,#6c0c54 0%,#6f1ea3 100%);
+                                animation: footerLi_hover 0.4s ease-out 0s;
+
+                                a {
+                                    
+                                    span {
+                                        animation: footerA_hover 0.4s ease-out 0s;
+                                    }
+                                }
+                            }
+    
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+
+                                span {
+                                    display: block;
+                                    line-height: 50px;
+                                    color: #ddc075;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //下部
+            .bottom {
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(to right,#5d4e20 0%,#c7b87b 52%,#5d4e20 100%);
+                text-align: center;
+
+                p {
+                    color: #200e18;
+                    font-weight: bold;
+                    padding-top: 45px;
+
+                    &:last-child {
+                        padding-top: 30px;
+                    }
+                }
+            }
+        }
+
+        //bg
+        .bg {
+            width: 100%;
+            min-width: 1600px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: url('../images/bg.jpg') no-repeat top center;
+            background-size: cover;
+            z-index: -999;
+        }
+    }
+}
+
+//動畫區
+
+//header re按鈕
+@keyframes re {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+//header選單hover時效果
+@keyframes li_hover1 {
+    0% {
+        opacity: 0;
+        width: 0%;
+        height: 0%;
+        border-radius: 50% 50% 0% 0%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 150%;
+        height: 150%;
+        border-radius: 50% 50% 0% 0%;
+    }
+}
+
+//header下拉式選單圖示滑出動畫
+@keyframes slideImg {
+    0% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+//右側選單hover彈動效果
+@keyframes rightSide_hover {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    30% {
+        transform: scale(1.2) rotate(-15deg);
+    }
+
+    45% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    60% {
+        transform: scale(1.2) rotate(-15deg);
+    }
+
+    75% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    80% {
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+//主選單金球浮動
+
+@keyframes floatBall1 {
+    0% {
+        transform: translate(80%,50%);
+    }
+
+    100% {
+        transform: translate(0%,0%);
+    }
+}
+
+@keyframes floatBall2 {
+    0% {
+        transform: translate(50%,80%);
+    }
+
+    100% {
+        transform: translate(0%,0%);
+    }
+}
+
+@keyframes floatBall3 {
+    0% {
+        transform: translate(80%,-50%);
+    }
+
+    100% {
+        transform: translate(0%,0%);
+    }
+}
+
+@keyframes floatBall4 {
+    0% {
+        transform: translate(-50%,80%);
+    }
+
+    100% {
+        transform: translate(0%,0%);
+    }
+}
+
+//主選單hover動畫字彈出效果
+@keyframes wordJump {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(1.4) rotate(45deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1) rotate(0deg);
+    }
+}
+
+//主選單hover人物淡出效果+header選單hover字效果
+@keyframes imgJump {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+//footer選單hover淡出動畫
+@keyframes footerLi_hover {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//footer選單hover滑入動畫
+@keyframes footerA_hover {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
